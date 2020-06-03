@@ -6,8 +6,9 @@ import SignIn from "../pages/signIn/";
 import Order from "../pages/order/";
 import Deliveryman from "../pages/deliveryman/";
 import Recipients from "../pages/recipients/";
+import Problem from "../pages/problem/";
+import Regdel from "../pages/registerDeliveryman";
 
-import Content from "../styles/components/contentDefault";
 export default function Routes() {
   return (
     <BrowserRouter>
@@ -16,8 +17,8 @@ export default function Routes() {
         <Route path="/order" exact component={Order} />
         <Route path="/deliveryman" exact component={Deliveryman} />
         <Route path="/recipients" exact component={Recipients} />
-
-        <Route path="/content" exact component={Content} />
+        <Route path="/problem" exact component={Problem} />
+        <Route path="/registerdelivery" exact component={Regdel} />
       </Switch>
     </BrowserRouter>
   );

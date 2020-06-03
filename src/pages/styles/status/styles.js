@@ -18,7 +18,7 @@ const colors = {
     color: #2ca42b;
   `,
 };
-export const Status = styled.button`
+export const Status = styled.div`
   height: 25px;
   display: flex;
   align-items: center;
@@ -26,6 +26,5 @@ export const Status = styled.button`
   font-size: 12px;
   padding: 0 5px;
   border: transparent;
-
   ${(props) => colors[props.status]};
 `;

@@ -1,14 +1,16 @@
 import React from "react";
 
-import { Head, Body } from "../HeadBody";
-import Content from "../../styles/components/contentDefault";
-import Status from "../../styles/components/status/index";
+import { Head, Body } from "../styles/ListHeadBody/styles";
+import Search from "../styles/SearchRegister";
+import Content from "../styles/contentDefault";
+import Status from "../styles/status/index";
 import { MdMoreHoriz } from "react-icons/md";
 
 function order() {
   return (
     <>
-      <Content name="Gerenciamento de encomenda" search="Buscar Por Encomenda">
+      <Content name="Gerenciamento de encomenda">
+        <Search search="Buscar Por Encomenda" />
         <Head>
           <li>ID</li>
           <li>Destinatário</li>

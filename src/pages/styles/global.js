@@ -24,6 +24,7 @@ body {
 }
 body,input, button {
     font: 14px 'Arial',sans-serif;   
+    border: transparent;
 }
 a{
     text-decoration: none;

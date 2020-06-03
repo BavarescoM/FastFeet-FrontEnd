@@ -1,16 +1,14 @@
 import React from "react";
 
 import { MdMoreHoriz } from "react-icons/md";
-import Content from "../../styles/components/contentDefault";
-import { Head, Body } from "../HeadBody";
+import Content from "../styles/contentDefault";
+import { Head, Body } from "../styles/ListHeadBody/styles";
+import Search from "../styles/SearchRegister";
 
 function recipients() {
   return (
-    <Content
-      name="Gerenciamento de Destinatários"
-      search="Buscar Por destinatário"
-      primary
-    >
+    <Content name="Gerenciamento de Destinatários">
+      <Search search="Buscar Por destinatário" />
       <Head>
         <li>ID</li>
 

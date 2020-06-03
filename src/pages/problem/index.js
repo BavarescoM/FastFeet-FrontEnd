@@ -3,27 +3,20 @@ import React from "react";
 import { MdMoreHoriz } from "react-icons/md";
 import Content from "../styles/contentDefault";
 import { Head, Body } from "../styles/ListHeadBody/styles";
-import Search from "../styles/SearchRegister";
 
-function deliveryman() {
+function problem() {
   return (
-    <Content name="Gerenciamento de Entregadores">
-      <Search search="Buscar Por Entregadores" />
+    <Content name="Problemas na Entrega">
       <Head>
-        <li>ID</li>
-        <li>Foto</li>
-        <li>Nome</li>
-        <li>Email</li>
+        <li>Encomenda</li>
+
+        <li>Problema</li>
+
         <li>Ações</li>
       </Head>
       <Body>
         <li>#01</li>
-        <li>
-          s
-          <img src="#" alt="" />
-        </li>
-        <li>joh doe</li>
-        <li>ludowe@deregs.com</li>
+        <li>cão bravo mordeu o entregador eo cliente estava armado</li>
         <li>
           <button>
             <MdMoreHoriz size={16} color="#C6C6C6" />
@@ -32,12 +25,7 @@ function deliveryman() {
       </Body>
       <Body>
         <li>#01</li>
-        <li>
-          s
-          <img src="#" alt="" />
-        </li>
-        <li>joh doe</li>
-        <li>ludowe@deregs.com</li>
+        <li>cão bravo mordeu o entregador eo cliente estava armado</li>
         <li>
           <button>
             <MdMoreHoriz size={16} color="#C6C6C6" />
@@ -46,12 +34,7 @@ function deliveryman() {
       </Body>
       <Body>
         <li>#01</li>
-        <li>
-          s
-          <img src="#" alt="" />
-        </li>
-        <li>joh doe</li>
-        <li>ludowe@deregs.com</li>
+        <li>cão bravo mordeu o entregador eo cliente estava armado</li>
         <li>
           <button>
             <MdMoreHoriz size={16} color="#C6C6C6" />
@@ -62,4 +45,4 @@ function deliveryman() {
   );
 }
 
-export default deliveryman;
+export default problem;

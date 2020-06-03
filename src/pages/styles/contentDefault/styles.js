@@ -14,23 +14,7 @@ export const Content = styled.div`
 
     font-size: 24px;
   }
-  div {
-    display: ${(props) => (props.primary ? "flex" : "none")};
 
-    justify-content: space-between;
-
-    label {
-      display: flex;
-      align-items: center;
-      padding: 0 0 0 10px;
-      background: #fff;
-      border-radius: 4px;
-      border: 1px solid #dddddd;
-      input {
-        border: transparent;
-        padding: 8px;
-      }
-    }
     button {
       font-size: 14px;
       border-radius: 4px;

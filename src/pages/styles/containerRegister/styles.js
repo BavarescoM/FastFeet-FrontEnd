@@ -30,6 +30,7 @@ export const Content = styled.div`
         padding: 2px 2px;
       }
     }
+
     button:nth-child(1) {
       margin-right: 20px;
       background: #cccccc;
@@ -42,14 +43,28 @@ export const Content = styled.div`
 
 export const Form = styled.form`
   display: flex;
-  flex-direction: column;
-
+  flex-wrap: wrap;
   border-radius: 4px;
   margin: 0 20%;
   padding: 30px 30px;
   background: #fff;
+  label {
+    margin-bottom: 3px;
+    margin-top: 10px;
+    font-weight: 700;
+  }
 
-  input {
-    width: ${(props) => (props.width ? "with%" : "100%")};
+  div.line {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input,
+  select,
+  option {
+    padding: 12px 10px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
   }
 `;

@@ -8,6 +8,9 @@ import Deliveryman from "../pages/deliveryman/";
 import Recipients from "../pages/recipients/";
 import Problem from "../pages/problem/";
 import Regdel from "../pages/registerDeliveryman";
+import RegRec from "../pages/registerRecipient";
+import RegDel from "../pages/registerDelivery";
+import UpDelman from "../pages/updateDeliveryman";
 
 export default function Routes() {
   return (
@@ -18,7 +21,11 @@ export default function Routes() {
         <Route path="/deliveryman" exact component={Deliveryman} />
         <Route path="/recipients" exact component={Recipients} />
         <Route path="/problem" exact component={Problem} />
-        <Route path="/registerdelivery" exact component={Regdel} />
+        <Route path="/registerdeliveryman" exact component={Regdel} />
+        <Route path="/updatedeliveryman" exact component={UpDelman} />
+
+        <Route path="/registerrecipient" exact component={RegRec} />
+        <Route path="/registerdelivery" exact component={RegDel} />
       </Switch>
     </BrowserRouter>
   );

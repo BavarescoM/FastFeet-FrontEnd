@@ -36,4 +36,19 @@ ul {
 button {
     cursor: pointer;
 }
+.w100 {
+    width: 100%;
+}
+.w60{
+    width: 56%;
+}
+.w50{
+    width: 49%;
+}
+.w33{
+    width: 32%;
+}
+.w20{
+    width: 20%;
+}
 `;

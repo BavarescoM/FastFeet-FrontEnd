@@ -3,9 +3,9 @@ import React from "react";
 // import { Container } from './styles';
 import ContainerRegister from "../styles/containerRegister";
 
-function registerDeliveryman() {
+function updateDeliveryman() {
   return (
-    <ContainerRegister register="Cadastro de entregadores">
+    <ContainerRegister register="Edição de entregadores">
       <label className="w100">Nome</label>
       <input type="text" placeholder="Fulano" className="w100" />
       <label className="w100">Email</label>
@@ -18,4 +18,4 @@ function registerDeliveryman() {
   );
 }
 
-export default registerDeliveryman;
+export default updateDeliveryman;

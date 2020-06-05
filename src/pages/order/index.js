@@ -5,12 +5,16 @@ import Search from "../styles/SearchRegister";
 import Content from "../styles/contentDefault";
 import Status from "../styles/status/index";
 import { MdMoreHoriz } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 function order() {
+
+
+  
   return (
     <>
       <Content name="Gerenciamento de encomenda">
-        <Search search="Buscar Por Encomenda" />
+        <Search search="Buscar Por Encomenda"  goRegister="/registerdelivery" />
         <Head>
           <li>ID</li>
           <li>Destinatário</li>

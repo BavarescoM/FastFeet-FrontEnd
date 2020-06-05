@@ -2,18 +2,19 @@ import React from "react";
 
 import { SearchRegister } from "./styles";
 import { MdAdd, MdSearch } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
-function Search({ search }) {
+function Search({ search, goRegister }) {
   return (
     <SearchRegister>
       <label htmlFor="">
         <MdSearch size={16} color="#999999" />
         <input type="search" placeholder={search}></input>
       </label>
-      <button>
-        <MdAdd size={16} color="#fff" />
+      <Link to={goRegister}>
+        <MdAdd size={16} color="#fff"  />
         CADASTRAR
-      </button>
+      </Link>
     </SearchRegister>
   );
 }

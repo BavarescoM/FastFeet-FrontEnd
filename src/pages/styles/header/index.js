@@ -2,25 +2,36 @@ import React from "react";
 
 import { Container, List, Logout } from "./styles";
 import logo from "../../../assets/logo.png";
+import { Link } from 'react-router-dom';
 function header() {
   return (
     <Container>
       <List>
         <li>
+          <Link to="/order">
           <img src={logo} alt="logo" />
+          </Link>
         </li>
 
         <li>
-          <a href="#">ENCOMENDAS</a>
+           <Link to="/order">
+          ENCOMENDAS
+          </Link>
         </li>
         <li>
-          <a href="#"> ENTREGADORES</a>
+        <Link to="/deliveryman">
+           ENTREGADORES
+          </Link>
         </li>
         <li>
-          <a href="#">DESTINATÁRIOS</a>
+        <Link to="/recipients">
+          DESTINATÁRIOS
+          </Link>
         </li>
         <li>
-          <a href="#">PROBLEMAS</a>
+        <Link to="/problem">
+          PROBLEMAS
+          </Link>
         </li>
       </List>
       <Logout>

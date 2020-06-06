@@ -45,10 +45,19 @@ button {
 .w50{
     width: 49%;
 }
+.w40{
+    width: 40%;
+}
 .w33{
     width: 32%;
 }
+.w30{
+    width: 30%;
+}
 .w20{
     width: 20%;
+}
+.w10 {
+   width:10%;
 }
 `;

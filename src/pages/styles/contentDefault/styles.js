@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 export const Content = styled.div`
   margin: 0 10%;
-  p {
+  >p {
     padding-top: 30px;
     padding-bottom: 30px;
     font-weight: 700;
@@ -15,7 +15,7 @@ export const Content = styled.div`
     font-size: 24px;
   }
 
-    button {
+    >button {
       font-size: 14px;
       border-radius: 4px;
       padding: 0px 10px;
@@ -24,5 +24,5 @@ export const Content = styled.div`
       background: #7d40e7;
       color: #fff;
     }
-  }
+  
 `;

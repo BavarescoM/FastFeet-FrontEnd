@@ -15,7 +15,7 @@ import UpDelman from "../pages/updateDeliveryman";
 export default function Routes() {
   return (
     <BrowserRouter>
-      <Switch>
+      <Switch >
         <Route path="/" exact component={SignIn} />
         <Route path="/order" exact component={Order} />
         <Route path="/deliveryman" exact component={Deliveryman} />

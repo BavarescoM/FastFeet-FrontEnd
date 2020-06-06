@@ -12,13 +12,13 @@ export const Content = styled.div`
   align-items: center;
   margin: 0 20%;
 
-  div {
+  >div {
     padding: 30px 0px;
     font-size: 24px;
     font-weight: 700;
     display: flex;
 
-    button {
+    >button,a {
       display: flex;
       align-items: center;
 
@@ -26,16 +26,16 @@ export const Content = styled.div`
       color: white;
       font-size: 14px;
       border-radius: 4px;
-      svg {
+      >svg {
         padding: 2px 2px;
       }
     }
 
-    button:nth-child(1) {
+    >a:nth-child(1) {
       margin-right: 20px;
       background: #cccccc;
     }
-    button:nth-child(2) {
+    >button:nth-child(2) {
       background: #7d40e7;
     }
   }
@@ -48,13 +48,15 @@ export const Form = styled.form`
   margin: 0 20%;
   padding: 30px 30px;
   background: #fff;
-  label {
+  >label {
     margin-bottom: 3px;
     margin-top: 10px;
     font-weight: 700;
   }
 
   div.line {
+    font-weight:700;
+    margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: space-between;

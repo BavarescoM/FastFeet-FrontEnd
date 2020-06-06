@@ -17,15 +17,15 @@ export const List = styled.ul`
   img {
     height: 20px;
   }
-  li {
+  >li {
     padding: 0px 10px;
     height: 20px;
   }
-  li:nth-child(1) {
+  >li:nth-child(1) {
     border-right: 1px solid #dddddd;
   }
 
-  a {
+  >a {
     font-size: 15px;
     &:active {
       font-weight: 700;
@@ -34,11 +34,11 @@ export const List = styled.ul`
 `;
 export const Logout = styled.ul`
   margin-right: 10px;
-  label {
+  >label {
     font-size: 14px;
     font-weight: 700;
   }
-  a {
+  >a {
     color: #de3b3b;
   }
 `;

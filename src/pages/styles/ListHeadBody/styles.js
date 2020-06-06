@@ -2,25 +2,40 @@ import styled from "styled-components";
 
 export const Head = styled.ul`
   display: flex;
-  justify-content: space-between;
-  margin: 20px;
+  align-items: center;  
+  margin: 20px  0 20px 0;
+  
+  >li:nth-child(1) {
+    
+    margin-left: 25px;
+  }
+  >li:nth-last-child(1) {
+    text-align: end;
+    margin-right: 5px;
+
+  }
+  
 `;
 export const Body = styled.ul`
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 10px;
+  display: flex;  
   background: #fff;
 
-  li {
-    margin: 10px 10px;
+  >li { 
     color: #666666;
-    padding: 20px 20px;
+    padding: 20px 2px;
     height: 57px;
 
     button {
+      float: right;
       background: transparent;
-      border: transparent;
+      
     }
+  }
+  >li:nth-child(1) {
+    margin-left: 25px;
+  }
+  >li:last-child(1) {
+    align-items: flex-end;
   }
 `;

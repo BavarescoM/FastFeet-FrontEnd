@@ -16,4 +16,12 @@ export const SearchRegister = styled.div`
       padding: 8px;
     }
   }
+  a {
+    background: #7D40E7;
+    color: #fff;
+    padding: 5px 5px;
+    display:flex;
+    align-items: center;
+    border-radius: 4px;
+  }
 `;

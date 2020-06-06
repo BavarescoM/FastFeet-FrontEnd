@@ -8,39 +8,40 @@ function problem() {
   return (
     <Content name="Problemas na Entrega">
       <Head>
-        <li>Encomenda</li>
+        <li className="w20">Encomenda</li>
 
-        <li>Problema</li>
+        <li className="w60">Problema</li>
 
-        <li>Ações</li>
+        <li className="w20">Ações</li>
       </Head>
       <Body>
-        <li>#01</li>
-        <li>cão bravo mordeu o entregador eo cliente estava armado</li>
-        <li>
+        <li className="w20">#01</li>
+        <li className="w60">cão bravo mordeu o entregador eo cliente estava armado</li>
+        <li className="w20">
           <button>
             <MdMoreHoriz size={16} color="#C6C6C6" />
           </button>
         </li>
       </Body>
       <Body>
-        <li>#01</li>
-        <li>cão bravo mordeu o entregador eo cliente estava armado</li>
-        <li>
+        <li className="w20">#01</li>
+        <li className="w60">cão bravo mordeu o entregador eo cliente estava armado</li>
+        <li className="w20">
           <button>
             <MdMoreHoriz size={16} color="#C6C6C6" />
           </button>
         </li>
       </Body>
       <Body>
-        <li>#01</li>
-        <li>cão bravo mordeu o entregador eo cliente estava armado</li>
-        <li>
+        <li className="w20">#01</li>
+        <li className="w60">cão bravo mordeu o entregador eo cliente estava armado</li>
+        <li className="w20">
           <button>
             <MdMoreHoriz size={16} color="#C6C6C6" />
           </button>
         </li>
       </Body>
+      
     </Content>
   );
 }

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
@@ -20,26 +20,29 @@ export const Container = styled.div`
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 20px solid #e1e1e1;
-
   }
-
 `;
 export const List = styled.ul`
-
-  >li {
+  > li {
     display: flex;
     align-items: center;
-    
+
     width: 100%;
-    height:45px;
-    >a{  
-        color: #999999;
-        text-align: center;
-        width: 100%;
+    height: 45px;
+    > a {
+      color: #999999;
+      text-align: center;
+      width: 100%;
     }
   }
-  >li + li {
-      border-top: 1px #00000026 solid;
-      
+  > li + li {
+    border-top: 1px #00000026 solid;
+  }
+  > li:hover {
+    background: #f2f2f2;
+
+    a {
+      color: #000;
+    }
   }
 `;

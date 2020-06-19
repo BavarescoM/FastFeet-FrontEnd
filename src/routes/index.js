@@ -1,6 +1,5 @@
 import React from "react";
-import { Switch, BrowserRouter } from "react-router-dom";
-import Route from "./Route";
+import { Switch } from "react-router-dom";
 
 import SignIn from "../pages/signIn/";
 import Order from "../pages/order/";
@@ -10,22 +9,28 @@ import Problem from "../pages/problem/";
 import Regdel from "../pages/registerDeliveryman";
 import RegRec from "../pages/registerRecipient";
 import RegDel from "../pages/registerDelivery";
-import UpDelman from "../pages/updateDeliveryman";
 
+import Route from "./Route";
 export default function Routes() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={SignIn} />
-        <Route path="/order" component={Order} isPrivate />
-        <Route path="/deliveryman" component={Deliveryman} isPrivate />
-        <Route path="/recipients" component={Recipients} isPrivate />
-        <Route path="/problem" component={Problem} isPrivate />
-        <Route path="/registerdeliveryman" component={Regdel} isPrivate />
-        <Route path="/updatedeliveryman" component={UpDelman} isPrivate />
-        <Route path="/registerrecipient" component={RegRec} isPrivate />
-        <Route path="/registerdelivery" component={RegDel} isPrivate />
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      {/* login */}
+      <Route path="/" exact component={SignIn} />
+
+      {/* list */}
+      <Route path="/order" component={Order} isPrivate />
+      <Route path="/deliveryman" component={Deliveryman} isPrivate />
+      <Route path="/recipients" component={Recipients} isPrivate />
+      <Route path="/problem" component={Problem} isPrivate />
+
+      {/* edit/update */}
+      <Route path="/registerdeliveryman" component={Regdel} isPrivate />
+      <Route path="/updatedeliveryman/:id" component={Regdel} isPrivate />
+
+      <Route path="/registerrecipient" component={RegRec} isPrivate />
+      <Route path="/updaterecipient/:id" component={RegRec} isPrivate />
+
+      <Route path="/registerdelivery" component={RegDel} isPrivate />
+    </Switch>
   );
 }

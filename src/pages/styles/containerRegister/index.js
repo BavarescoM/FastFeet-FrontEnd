@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Container, Content, Form } from "./styles";
+import { Container, Content, FormContainer } from "./styles";
 import Header from "../header";
 import { MdArrowBack, MdCheck } from "react-icons/md";
-import { Link } from 'react-router-dom';
-
-function containerRegister({ register, children }) {
+import { Link } from "react-router-dom";
+function containerRegister({ register, children, goback }) {
   return (
     <>
       <Header />
@@ -13,17 +12,17 @@ function containerRegister({ register, children }) {
         <Content>
           <div>{register}</div>
           <div>
-            <Link >
+            <Link to={goback}>
               <MdArrowBack size={26} color="#fff" />
               <p>VOLTAR</p>
             </Link>
-            <button>
+            <button type="submit">
               <MdCheck size={26} color="#fff" />
               <p>SALVAR</p>
             </button>
           </div>
         </Content>
-        <Form>{children}</Form>
+        <FormContainer>{children}</FormContainer>
       </Container>
     </>
   );

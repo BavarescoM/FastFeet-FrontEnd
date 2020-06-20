@@ -37,6 +37,9 @@ export const List = styled.ul`
       text-align: center;
       width: 100%;
     }
+    > button {
+      width: 100%;
+    }
   }
   > li + li {
     border-top: 1px #00000026 solid;

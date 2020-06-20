@@ -1,6 +1,6 @@
+/* eslint-disable no-undef */
 import React, { useState, useEffect } from "react";
 
-import { MdMoreHoriz } from "react-icons/md";
 import Content from "../styles/contentDefault";
 import { Head, Body } from "../styles/ListHeadBody/styles";
 import Search from "../styles/SearchRegister";
@@ -10,37 +10,52 @@ import { Link } from "react-router-dom";
 import { MdEdit, MdDeleteForever } from "react-icons/md";
 import api from "../../services/api";
 import history from "../../services/history";
+import Pagination from "../styles/Pagination";
 
 function Recipients() {
   const [recipients, setRecipients] = useState([]);
+  const [pages, setPages] = useState(1);
+  const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
+  const [valueSearch, setValueSearch] = useState();
+
   async function deleteRecipient(id) {
     try {
-      console.tron.log(id);
-      const response = await api.delete(`recipients/${id}`);
+      await api.delete(`recipients/${id}`);
       history.go("/recipients");
       toast.success("Item deletado com suceso");
     } catch (err) {
       toast.error("Ocorreu um erro ao deletar");
     }
   }
+
+  async function searchRecipients(e) {
+    setValueSearch(e.target.value);
+    console.log(page);
+    const response = await api.get(
+      `/recipients?search=${valueSearch}&page=${page}`
+    );
+    setRecipients(response.data.items);
+    setPage(response.data.page);
+    setPages(response.data.pages);
+    setTotal(response.data.total);
+  }
+
   useEffect(() => {
     async function loadRecipient() {
-      const response = await api.get("/recipients");
-      setRecipients(response.data);
+      const response = await api.get("/recipients?search&page=1&limit=5");
+      setRecipients(response.data.items);
     }
     loadRecipient();
   }, []);
-  const [visible, setVisible] = useState(false);
-  function handleToggleVisible(id) {
-    console.tron.log(id);
-    if (id) setVisible(!visible);
-  }
 
   return (
     <Content name="Gerenciamento de Destinatários">
       <Search
         search="Buscar Por destinatário"
         goRegister="/registerrecipient"
+        inptSearch={searchRecipients}
+        valueSearch={valueSearch}
       />
       <Head>
         <li className="w20">ID</li>
@@ -56,21 +71,18 @@ function Recipients() {
           <li className="w30">{recipient.name}</li>
           <li className="w30">{recipient.street}</li>
           <li className="w20">
-            <button>
-              <MdMoreHoriz
-                size={16}
-                color="#C6C6C6"
-                onClick={() => handleToggleVisible(recipient.id)}
-              />
-            </button>
-            <InfoCrud visible={visible} id={recipient.id}>
+            <InfoCrud>
               <li>
                 <MdEdit size={30} color="#4D85EE" />
+
                 <Link to={`/updaterecipient/${recipient.id}`}>Editar</Link>
               </li>
               <li>
                 <MdDeleteForever size={30} color="#DE3B3B" />
-                <button onClick={() => deleteRecipient(recipient.id)}>
+                <button
+                  type="button"
+                  onClick={() => deleteRecipient(recipient.id)}
+                >
                   Excluir
                 </button>
               </li>
@@ -78,6 +90,7 @@ function Recipients() {
           </li>
         </Body>
       ))}
+      <Pagination total={total} page={page} pages={pages} />
     </Content>
   );
 }

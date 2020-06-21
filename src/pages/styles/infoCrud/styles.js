@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  z-index: 10;
   position: relative;
   width: 130px;
-  left: calc(50% - -30px);
+  left: calc(50% - -12px);
   top: calc(100% + 30px);
   background: #e1e1e1;
   border-radius: 4px;
@@ -33,7 +34,7 @@ export const List = styled.ul`
     width: 100%;
     height: 45px;
     > a {
-      color: #999999;
+      color: black;
       text-align: center;
       width: 100%;
     }

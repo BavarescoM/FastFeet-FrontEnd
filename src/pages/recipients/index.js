@@ -31,7 +31,6 @@ function Recipients() {
 
   async function searchRecipients(e) {
     setValueSearch(e.target.value);
-    console.log(page);
     const response = await api.get(
       `/recipients?search=${valueSearch}&page=${page}`
     );
@@ -41,13 +40,26 @@ function Recipients() {
     setTotal(response.data.total);
   }
 
+  async function handlePagination(n) {
+    const response = await api.get(
+      `/recipients?search=${valueSearch}&page=${n}`
+    );
+    setRecipients(response.data.items);
+    setPage(response.data.page);
+    setPages(response.data.pages);
+    setTotal(response.data.total);
+  }
+
   useEffect(() => {
     async function loadRecipient() {
-      const response = await api.get("/recipients?search&page=1&limit=5");
+      const response = await api.get(`/recipients?search&page=${page}`);
       setRecipients(response.data.items);
+      setPage(response.data.page);
+      setPages(response.data.pages);
+      setTotal(response.data.total);
     }
     loadRecipient();
-  }, []);
+  }, [page]);
 
   return (
     <Content name="Gerenciamento de Destinatários">
@@ -55,7 +67,6 @@ function Recipients() {
         search="Buscar Por destinatário"
         goRegister="/registerrecipient"
         inptSearch={searchRecipients}
-        valueSearch={valueSearch}
       />
       <Head>
         <li className="w20">ID</li>
@@ -90,7 +101,12 @@ function Recipients() {
           </li>
         </Body>
       ))}
-      <Pagination total={total} page={page} pages={pages} />
+      <Pagination
+        total={total}
+        page={page}
+        pages={pages}
+        callback={handlePagination}
+      />
     </Content>
   );
 }

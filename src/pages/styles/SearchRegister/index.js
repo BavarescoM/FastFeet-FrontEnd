@@ -7,14 +7,9 @@ import { Link } from "react-router-dom";
 function Search({ search, goRegister, inptSearch, valueSearch }) {
   return (
     <SearchRegister>
-      <label htmlFor="">
+      <label htmlFor="Pesquisar">
         <MdSearch size={16} color="#999999" />
-        <input
-          type="search"
-          placeholder={search}
-          onKeyUp={inptSearch}
-          value={valueSearch}
-        />
+        <input type="search" placeholder={search} onChange={inptSearch} />
       </label>
       <Link to={goRegister}>
         <MdAdd size={16} color="#fff" />

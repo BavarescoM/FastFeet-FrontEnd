@@ -9,21 +9,26 @@ import {
 
 import { Container, Text, Buttons, Button } from "./styles";
 
-export default function Pagination({ total = 0, pages = 1, page = 1 }) {
+export default function Pagination({
+  total = 0,
+  pages = 1,
+  page = 1,
+  callback,
+}) {
   function handleFirstPage() {
-    return 1;
+    callback(1);
   }
 
-  function handlePrevPage(page) {
-    return page - 1;
+  function handlePrevPage() {
+    callback(page - 1);
   }
 
-  function handleNextPage(page) {
-    return page + 1;
+  function handleNextPage() {
+    callback(page + 1);
   }
 
-  function handleLastPage(pages) {
-    return pages;
+  function handleLastPage() {
+    callback(pages);
   }
 
   return (

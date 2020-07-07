@@ -8,7 +8,7 @@ function infoCrud({ children }) {
   const [visible, setVisible] = useState(false);
 
   function handleToggle() {
-    console.log("visvel");
+    console.log("visvel 111");
     setVisible(!visible);
   }
   const listener = useCallback(() => {

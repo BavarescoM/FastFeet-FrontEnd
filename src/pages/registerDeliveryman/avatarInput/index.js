@@ -4,7 +4,7 @@ import { useField } from "@rocketseat/unform";
 import { Container } from "./styles";
 import api from "../../../services/api";
 
-function AvatarInput() {
+function AvatarInput({ updateImg }) {
   const { defaultValue, registerField } = useField("avatar");
   const [file, setFile] = useState(defaultValue && defaultValue.id);
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
@@ -31,7 +31,7 @@ function AvatarInput() {
   return (
     <Container>
       <label htmlFor="avatar">
-        <img src={preview} alt="" />
+        <img src={preview || updateImg} alt="" />
         <input
           type="file"
           id="avatar"

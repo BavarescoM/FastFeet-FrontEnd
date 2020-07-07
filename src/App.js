@@ -8,15 +8,17 @@ import Routes from "./routes";
 import history from "./services/history";
 import { store, persistor } from "./store";
 import Global from "./pages/styles/global";
-
+import Modal from "./pages/styles/context/ModalContext";
 function App() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <Router history={history}>
-          <Routes />
-          <Global />
-          <ToastContainer autoCloso={1000} />
+          <Modal>
+            <Routes />
+            <Global />
+            <ToastContainer autoCloso={1000} />
+          </Modal>
         </Router>
       </PersistGate>
     </Provider>

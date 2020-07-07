@@ -85,9 +85,7 @@ function Deliveryman() {
             <InfoCrud>
               <li>
                 <MdEdit size={30} color="#4D85EE" />
-                <Link to={`/registerdeliveryman/${deliveryman.id}`}>
-                  Editar
-                </Link>
+                <Link to={`/updatedeliveryman/${deliveryman.id}`}>Editar</Link>
               </li>
               <li>
                 <MdDeleteForever size={30} color="#DE3B3B" />

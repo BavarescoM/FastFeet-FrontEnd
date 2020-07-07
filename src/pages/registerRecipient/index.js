@@ -11,12 +11,11 @@ function registerRecipient({ match }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [recipient, setRecipient] = useState([]);
   const { id } = match.params;
-
+  console.tron.log(id);
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     async function loadUpdate() {
       const response = await api.get(`recipients/${id}`);
-      console.tron.log(response);
       setRecipient(response.data);
     }
     loadUpdate();
